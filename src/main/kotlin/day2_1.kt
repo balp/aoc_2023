@@ -1,6 +1,3 @@
-import kotlin.io.path.Path
-import kotlin.io.path.readLines
-
 enum class Color {RED, GREEN, BLUE}
 
 data class Draw(val count: Int, val color: Color)
@@ -37,11 +34,6 @@ fun Game.power(): Int {
     return power
 }
 
-fun readInput(name: String) = Path("resources/$name.txt").readLines()
-/**
- * The cleaner shorthand for printing output.
- */
-fun Any?.println() = println(this)
 fun main() {
     val gameLineRegex = """Game (\d+)""".toRegex()
     val setRegex = """(\d+) (\w+)""".toRegex()
